@@ -7,7 +7,7 @@ import { openSubMenu } from "./MainNavMech";
 
 function MainNav() {
   return (
-    <>
+    <div className={styles.wrapper}>
       <div className={styles.MainNav}>
         <div className={styles.logo}>
           <img src={logo} />
@@ -66,7 +66,7 @@ function MainNav() {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 

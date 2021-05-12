@@ -1,3 +1,4 @@
+@import '../../../Styles/Mixins/Breakpoints.scss';
 .heroSection{
     display: flex;
     background-image: url('../../../Images/counter.jpg');
@@ -15,12 +16,29 @@
         background: linear-gradient(125deg, rgba(0,0,0,0.70) 35%, rgba(255,255,255,0) 85%);
         z-index: 0;
     }
+    @include media('<tablet'){
+        flex-direction: column;
+        >.docSec{
+            img{
+                max-width: 350px;
+            }
+            .heroHeading{
+                font-size: 2em;
+            } 
+        }
+        >.callToAct{
+            margin-top: 1.5em;
+        }
+    }
     >div{
         flex-grow: 1;
     }
     .docSec{
         position: relative;
         z-index: 2;
+        display: flex;
+        justify-content: center;
+        
         >img{
             padding-top: 5em;
             padding-left: 5em;
