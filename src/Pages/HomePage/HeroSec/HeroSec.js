@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./HeroSec.module.scss";
 import heroDoc from "../../../Images/hero_doc.png";
+import AppForm from "./AppForm/AppForm";
 
 function HeroSec() {
   return (
@@ -12,7 +13,7 @@ function HeroSec() {
         </h1>
       </div>
       <div className={styles.callToAct}>
-        <form action=""></form>
+        <AppForm />
       </div>
     </div>
   );

@@ -98,6 +98,10 @@
         margin-top: -16px;
         padding: 16px 0;
         transition: all .5s;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        margin-top: 16px;
         >li{
             >a{
                 text-decoration: none;
