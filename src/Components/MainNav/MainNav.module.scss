@@ -1,0 +1,97 @@
+@import '../../Styles/Mixins/Mixins.scss';
+@import '../../Styles/Mixins/Breakpoints.scss';
+.MainNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 1em;
+    background-color: #313D5A;
+
+    .logo{
+    > img{
+        max-width: 4em;
+        }
+    }
+
+    .links{
+        >ul{
+            display: flex;
+            gap: 1em;
+            list-style: none;
+            padding: 0;
+            @include media('<tablet'){
+                display: none;
+            }
+            >li{
+                >a{
+                    font-size: 1.5em;
+                    text-decoration: none;
+                    color: #63B4D1;
+                    @include transition-color(#90FCF9)
+                }
+            }
+        }
+    }
+    .userSection{
+        display: flex;
+        gap: 1em;
+        .login{
+        font-size: 1.25em;
+        background-color: transparent;
+        border: 2px solid #63B4D1;
+        outline: none;
+        color: white;
+        padding: .35em .5em;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .35s;
+        &:hover{
+            border: 2px solid #90FCF9;
+            color: #90FCF9;
+        }
+        >span{
+            margin-left: .25em;
+        }
+    }
+    .menu{
+        font-size: 2.5em;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        display: none;
+        cursor: pointer;
+        @include transition-color(#90FCF9);
+        @include media('<tablet'){
+                display: inline-block;
+            }
+    }
+    }
+    
+}
+
+.subNav{
+    >ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        list-style: none;
+        gap: 1em;
+        text-align: center;
+        background-color: #313D5A;
+        margin-top: -16px;
+        padding: 16px 0;
+        transition: all .5s;
+        >li{
+            >a{
+                text-decoration: none;
+                font-size: 1.5em;
+                color: #63B4D1;
+                @include transition-color(#90FCF9)
+            }
+        }
+    }
+    @include media('>tablet'){
+                display: none !important;
+    }
+}
