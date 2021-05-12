@@ -11,6 +11,7 @@ function MainNav() {
       <div className={styles.MainNav}>
         <div className={styles.logo}>
           <img src={logo} />
+          <h3>Doctors Planet</h3>
         </div>
         <div className={styles.links}>
           <ul>

@@ -8,9 +8,22 @@
     background-color: #313D5A;
 
     .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     > img{
         max-width: 4em;
+    }
+    >h3{
+        color: white;
+        margin: 0;
+        margin-top: auto;
+        font-size: 1.5em;
+        @include media('<tablet'){
+            font-size: 1em;
+
         }
+    }
     }
 
     .links{
@@ -51,6 +64,9 @@
         }
         >span{
             margin-left: .25em;
+        }
+        @include media('<tablet'){
+            font-size: 1em;
         }
     }
     .menu{
