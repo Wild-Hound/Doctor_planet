@@ -1,0 +1,12 @@
+.searchArea{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .doctorsArea{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        justify-content: center;
+    }
+}

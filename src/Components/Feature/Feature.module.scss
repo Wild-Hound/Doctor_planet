@@ -13,9 +13,9 @@
     box-shadow: 0 0 15px 20px rgba($color: #fff, $alpha: .1);
     &:hover{
         transform: scale(1.05);
-        border: 2px solid #FFD700;
+        border: 2px solid #90FCF9;
         >.icon{
-        color: #FFD700;
+        color: #90FCF9;
         }
     }
     @include media('<tablet'){

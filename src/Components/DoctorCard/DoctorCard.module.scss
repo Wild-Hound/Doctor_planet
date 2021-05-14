@@ -1,0 +1,73 @@
+.cardWrapper{
+    padding: .5em 1em;
+    position: relative;
+    overflow-y: hidden;
+    cursor: pointer;
+    margin-top: 3.5em;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 400px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.329) 65%, rgba(255,255,255,0) 100%);
+        z-index: 0;
+        transition: all .35s;
+    }
+    &:hover::after{
+            top: 0;
+        }
+
+    .cardHead{
+        >img{
+            max-height: 450px;
+        }
+        .docSubHeading{
+            display: flex;
+            gap: .5em;
+            margin: 1em 0;
+            
+            >h4{
+                font-weight: 500;
+                font-size: 1.15em;
+                color: #90FCF9;
+                border: 2px solid #90FCF9;
+                padding: .35em .65em;
+                margin: 0 auto;
+                z-index: 2;
+            }
+        }
+    }
+
+    .cardBody{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: white;
+        display: none;
+        >button{
+            padding: .35em .5em;
+            font-weight: 500;
+            font-size: 1.15em;
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #8BD175;
+            transition: all .35s;
+            &:hover{
+                background-color: #B0E0A3;
+            }
+        }
+    }
+    &:hover .cardBody{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
